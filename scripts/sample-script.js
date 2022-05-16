@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Transaction = await hre.ethers.getContractFactory("Transaction");
-  const transaction = await Transaction.deploy();
+  const Token = await hre.ethers.getContractFactory("UserDetails");
+  const token = await Token.deploy();
 
-  await transaction.deployed();
+  await token.deployed();
 
-  console.log("Transaction deployed to:", transaction.address);
+  console.log("Deployed to:", token.address);
 
 }
 
